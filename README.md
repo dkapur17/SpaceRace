@@ -34,4 +34,4 @@ Enough with the boring details, here is a sneak peek of the game:
 
 ![Space Race SS](In_Game.png "Space Race")
 
-##### That's all for the Readme, now go on and enjoy the game!
+##### That's all for the Readme. Now go on and enjoy the game!
