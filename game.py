@@ -366,7 +366,7 @@ def game_play(p1_level, p2_level):
 
             # If the player collides with either a BlackHole or an Asteroid
             if black_hole_collision(p1, black_holes) or asteroid_collision(
-                    p1, black_holes):
+                    p1, asteroids):
                 # Show the explosion
                 create_explosion(p1)
                 # Turn change logic
