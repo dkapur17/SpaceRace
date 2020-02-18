@@ -23,6 +23,9 @@ fps = int(config_parser.get("info", "fps"))
 black_hole_count = int(config_parser.get("info", "black_hole_count"))
 success_message = config_parser.get("info", "success_message")
 collision_message = config_parser.get("info", "collision_message")
+white = bytes.fromhex(config_parser.get("colors", "white"))
+black = bytes.fromhex(config_parser.get("colors", "black"))
+blue = bytes.fromhex(config_parser.get("colors", "blue"))
 high_score = int(config_parser.get("score_keeping", "high_score"))
 
 
@@ -49,8 +52,6 @@ pixel_font_xl = pygame.font.Font(game_font, 80)
 # Global Variables
 p1_score = 0
 p2_score = 0
-white = (255, 255, 255)
-black = (0, 0, 0)
 
 
 # Class definitions
@@ -430,7 +431,7 @@ def game_play(p1_level, p2_level):
             p2_score += (1000 // p2_time_taken)
 
         # Update the screen content
-        screen.fill((0, 0, 20))
+        screen.fill(blue)
         dock_sites_draw(dock_sites)
         black_holes_draw(black_holes)
         asteroids_draw(asteroids)
