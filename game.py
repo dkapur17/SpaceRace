@@ -21,6 +21,8 @@ global_y_vel = float(config_parser.get("info", "player_velocity_y"))
 max_rounds = int(config_parser.get("info", "max_rounds"))
 fps = int(config_parser.get("info", "fps"))
 black_hole_count = int(config_parser.get("info", "black_hole_count"))
+success_message = config_parser.get("info", "success_message")
+collision_message = config_parser.get("info", "collision_message")
 high_score = int(config_parser.get("score_keeping", "high_score"))
 
 
@@ -367,6 +369,7 @@ def game_play(p1_level, p2_level):
             # If the player collides with either a BlackHole or an Asteroid
             if black_hole_collision(p1, black_holes) or asteroid_collision(
                     p1, asteroids):
+                print("Player 1", collision_message)
                 # Show the explosion
                 create_explosion(p1)
                 # Turn change logic
@@ -394,6 +397,7 @@ def game_play(p1_level, p2_level):
             # If the player collides with either a BlackHole or an Asteroid
             if black_hole_collision(p2, black_holes) or asteroid_collision(
                     p2, asteroids):
+                print("Player 2", collision_message)
                 # Show the explosion
                 create_explosion(p2)
                 # Round end logic
@@ -403,6 +407,7 @@ def game_play(p1_level, p2_level):
         # Boolean update decision
         # If Player 1 got to the other side
         if p1.y <= 10:
+            print("Player 1", success_message)
             # Turn change logic
             p1.active = False
             p2.active = True
@@ -415,6 +420,7 @@ def game_play(p1_level, p2_level):
 
         # If Player 2 got to the other side
         if p2.y >= 710:
+            print("Player 2", success_message)
             # Round end logic
             p2.active = False
             p2.success = True
