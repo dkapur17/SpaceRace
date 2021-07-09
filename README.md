@@ -1,9 +1,10 @@
 # SPACE RACE
 
-A game made in  PyGame for ISS 2020 Assignment 3
+A game made in  PyGame for ISS 2020
 
-This repository contains a game made using PyGame, along the guidelines
- mentioned in `ISS Assignment 3.pdf`. Here are the specifications of the game:
+<img src="./Misc/SpaceRace.gif" width="300px" />
+
+Here are the specifications of the game:
  
  1) There are two players in the game, starting at opposite ends of the screen
  2) The game arena has several partitions made by some **Dock Sites**
@@ -29,9 +30,5 @@ This repository contains a game made using PyGame, along the guidelines
      modularity of the code, features of the game like number of levels, player
      speed, game speed, etc. can easily be modified by changing its value in
      the configuration file
-
-Enough with the boring details, here is a sneak peek of the game:
-
-![Space Race SS](In_Game.png "Space Race")
-
+ 
 ##### That's all for the Readme. Now go on and enjoy the game!
